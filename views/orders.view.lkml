@@ -25,6 +25,14 @@ view: orders {
     # hidden: yes
     sql: ${TABLE}.user_id ;;
   }
+  dimension: string_field {
+    sql: CASE WHEN ${TABLE}.status = 'complete' THEN '1' ELSE 'NA' END ;;
+  }
+  dimension: location {
+    type: location
+    sql_latitude: ${string_field} ;;
+    sql_longitude: ${string_field} ;;
+  }
   measure: count {
     type: count
     drill_fields: [id, users.last_name, users.first_name, users.id, order_items.count]
