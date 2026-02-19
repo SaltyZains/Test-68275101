@@ -1,5 +1,5 @@
 view: xss {
-  sql_table_name: thelook.xss ;;
+  sql_table_name: demo_db.xss ;;
 
   dimension: attack_strings {
     type: string
