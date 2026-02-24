@@ -1,5 +1,5 @@
 view: users {
-  sql_table_name: thelook.users ;;
+  sql_table_name: demo_db.users ;;
   drill_fields: [id]
 
   dimension: id {
