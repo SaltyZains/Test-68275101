@@ -1,9 +1,9 @@
 view: orders {
   sql_table_name: demo_db.orders ;;
   drill_fields: [id]
+  autogenerate_primary_keys: yes
 
   dimension: id {
-    primary_key: yes
     type: number
     sql: ${TABLE}.id ;;
   }
