@@ -37,4 +37,8 @@ view: orders {
     type: count
     drill_fields: [id, users.last_name, users.first_name, users.id, order_items.count]
   }
+  measure: percent_of_total {
+    type: percent_of_total
+    sql: ${count} ;;
+  }
 }
