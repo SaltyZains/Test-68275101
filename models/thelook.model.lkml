@@ -1,4 +1,4 @@
-connection: "thelook2"
+connection: "thelook"
 
 # include all the views
 include: "/views/**/*.view.lkml"
