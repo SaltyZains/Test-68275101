@@ -1,5 +1,5 @@
 view: orders {
-  sql_table_name: thelook.orders ;;
+  sql_table_name: demo_db.orders ;;
   drill_fields: [id]
 
   dimension: id {
@@ -36,5 +36,9 @@ view: orders {
   measure: count {
     type: count
     drill_fields: [id, users.last_name, users.first_name, users.id, order_items.count]
+  }
+  measure: percent_of_total {
+    type: percent_of_total
+    sql: ${count} ;;
   }
 }

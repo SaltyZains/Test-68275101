@@ -2,7 +2,7 @@ connection: "thelook2"
 
 # include all the views
 include: "/views/**/*.view.lkml"
-
+include: "/sql_derived_table.view.lkml"
 include: "/Test.dashboard.lookml"
 
 datagroup: thelook_default_datagroup {
