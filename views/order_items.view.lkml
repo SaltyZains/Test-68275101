@@ -37,4 +37,11 @@ view: order_items {
     type: count
     drill_fields: [id, orders.id, inventory_items.id]
   }
+  measure: rownum_desc {
+    label: "Row number (DESC) of Dashboard Run Count"
+    type:
+    number
+    sql: RANK() OVER (ORDER BY ${count} ASC);;
+    # required_fields: [Sum_dashboard_Run_Count, title]
+  }
 }
