@@ -47,6 +47,7 @@ explore: order_items {
 }
 
 explore: orders {
+  always_filter: {filters:[users.my_filter: "25"]}
   join: users {
     type: left_outer
     sql_on: ${orders.user_id} = ${users.id} ;;
